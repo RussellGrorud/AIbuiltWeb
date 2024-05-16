@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Mode Website</title>
+
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="About.html">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
+<div class="content">
+  <h1>Welcome to Our Website</h1>
+  <p>This is a basic example of a dark mode website with a fixed top menu bar.</p>
+</div>
+
+<div class="toggle-container">
+  <label class="toggle-label" for="darkModeToggle">Dark Mode:</label>
+  <input type="checkbox" class="toggle-input" id="darkModeToggle">
+  <div class="toggle-slider"></div>
+</div>
+
+<script>
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  darkModeToggle.addEventListener('change', () => {
+    if (darkModeToggle.checked) {
+      body.classList.add('dark-mode');
+    } else {
+      body.classList.remove('dark-mode');
+    }
+  });
+</script>
+
+</body>
+</html>
